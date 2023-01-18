@@ -1,0 +1,33 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="p-10 flex flex-col md:flex-row">
+                <div class="flex flex-col flex-1">
+                    <h1 class="text-xl font-semibold mb-2 text-center">Dane firmy</h1>
+                    <p class="text-center text-lg">
+                        Lorem ipsum<br>
+                        Lorem ipsum<br>
+                        Lorem ipsum<br>
+                    </p>
+                    <a class="text-center" href="#">
+                        <span class="text-[#444] text-lg">+48 123 456 789</span>
+                    </a>
+                </div>
+                <ContactForm />
+            </div>
+		</main>
+	</body>
+</html>
